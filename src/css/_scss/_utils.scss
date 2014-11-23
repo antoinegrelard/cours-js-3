@@ -1,0 +1,21 @@
+// variables //
+
+// mixins //
+
+@mixin prefixr($property, $value...) {
+	-webkit-#{$property}: $value;
+	  -moz-#{$property}: $value;
+	   -ms-#{$property}: $value;
+	       #{$property}: $value;
+ }
+
+@mixin background-cover($url) {
+	background: url(#{$url}) no-repeat center center fixed;
+	@include prefixr("background-size", cover);
+}
+
+@mixin vertical-align {
+	position: relative;
+	top: 50%;
+	@include prefixr("transform", translateY(-50%));
+}
