@@ -33,3 +33,46 @@ ol {
 	}
 
 }
+
+.row {
+
+	.column {
+		display: inline-block;
+		vertical-align: middle;
+
+		.time-set {
+			display: inline-block;
+
+			span {
+				display: block;
+				height: 50px;
+				cursor: pointer;
+
+				img {
+					height: 100%;
+				}
+
+			}
+
+		}
+
+		.time-value {
+			display: inline-block;
+			width: 100px;
+			height: 100px;
+			background: #fff;
+			box-sizing: border-box;
+			border: 5px solid #333;
+			border-radius: 6px;
+		}
+
+		&.time-separator {
+			font-family: "Georgia", "Arial", "Sans-Serif";
+			-webkit-font-smoothing: antialiased;
+			font-size: 30px;
+			color: #333;
+		}
+
+	}
+
+}

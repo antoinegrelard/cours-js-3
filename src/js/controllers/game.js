@@ -1,14 +1,14 @@
-var game = angular.module("game");
-game.controller("gameController", [ "$rootScope", "$scope", "ngDialog", "$timeout", "clockService", function($rootScope, ngDialog, $scope, $timeout, clockService) {
+var game = angular.module("game", ["clockService"]);
+game.controller("gameController", [ "$rootScope", "$scope", "ngDialog", "$timeout", "$location", "clockService", function($rootScope, ngDialog, $scope, $timeout, $location, clockService) {
+	$scope.location = $location;
 	$scope.hour = 0;
 	$scope.minute = 0;
 	$scope.clock = {};
-	$rootScope.colorClock = 'clock1';
-	clockService.onInit($rootScope.colorClock);
+	clockService.onInit($rootScope.clockColor);
 	clockService.onStartGame();
 	$scope.clock.info = clockService.getPartTime();
-	$scope.onMatchedTimeClock = function() {
-	    if (clockService.onMatchedTimeClock($scope.hour, $scope.minute)) {
+	$scope.checkHour = function() {
+	    if (clockService.checkHour($scope.hour, $scope.minute)) {
 	        ngDialog.open({
 	            preCloseCallback: function(value) {
 	                if (value === 0) {

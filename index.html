@@ -9,7 +9,7 @@
 	</head>
 	<body>
 
-		<div ng-view></div>
+		<div ng-view ng-controller="mainController"></div>
 
 		<!-- build:js src/js/vendors.js -->
 		    <script type="text/javascript" src="./bower_components/jquery/dist/jquery.min.js"></script>
@@ -19,10 +19,8 @@
 		    <script type="text/javascript" src="./bower_components/kineticjs/kinetic.min.js"></script>
 		    <script type="text/javascript" src="./src/js/clock.js"></script>
 		    <script type="text/javascript" src="./src/js/routes/routes.js"></script>
-		    <script type="text/javascript" src="./src/js/routes/routesConfig.js"></script>
-		    <script type="text/javascript" src="./src/js/services/services.js"></script>
 		    <script type="text/javascript" src="./src/js/services/clockService.js"></script>
-		    <script type="text/javascript" src="./src/js/controllers/controllers.js"></script>
+		    <script type="text/javascript" src="./src/js/controllers/main.js"></script>
 		    <script type="text/javascript" src="./src/js/controllers/home.js"></script>
 		    <script type="text/javascript" src="./src/js/controllers/game.js"></script>
 		    <script type="text/javascript" src="./src/js/controllers/options.js"></script>

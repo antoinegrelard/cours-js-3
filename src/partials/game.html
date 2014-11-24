@@ -1,6 +1,25 @@
 <section class="section section_game">
 	<a class="back-button" href="#/"><img src="./src/img/retour.png" alt="go back to menu"></a>
 	<div id="clock"></div>
-	<p class="time-period"></p>
-	<div class="time-selector"></div>
+	<p class="time-period" ng-bind="clock.info"></p>
+	<div class="time-selector">
+		<ul class="row">
+			<li class="column">
+				<div class="time-set">
+					<span class="time-increase"><img src="./src/img/button_up.png"></span>
+					<span class="time-decrease"><img src="./src/img/button_down.png"></span>
+				</div>
+				<span class="time-value time-hour" ng-bind="hour"></span>
+			</li>
+			<li class="column time-separator">h</li>
+			<li class="column">
+				<span class="time-value time-minute" ng-bind="minute"></span>
+				<div class="time-set">
+					<span class="time-increase"><img src="./src/img/button_up.png"></span>
+					<span class="time-decrease"><img src="./src/img/button_down.png"></span>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<button class="button-verify" ng-click="checkHour()"><img src="./src/img/verify.png"></button>
 </section>

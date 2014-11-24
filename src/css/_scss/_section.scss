@@ -1,6 +1,7 @@
 .section {
 	margin: 0 auto;
 	width: 50%;
+	text-align: center;
 }
 
 .section_home {
@@ -12,6 +13,23 @@
 
 }
 
-.section_options {
-	text-align: center;
+.section_game {
+
+	.button-verify {
+		border: none;
+		background: none;
+		padding: 0;
+		width: 300px;
+		cursor: pointer;
+
+		img {
+			width: 100%;
+		}
+
+	}
+
+}
+
+.section_credits {
+	text-align: left;
 }

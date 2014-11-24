@@ -1,43 +1,41 @@
 var clockService = angular.module("clockService", []);
 clockService.service('clockService', function() {
-    var _hour;
-    var _minute;
-    var _clock;
+    var hour;
+    var minute;
+    var clock;
     return {
-        onInit: function(colorClock) {
-            _hour = Math.floor((Math.random() * 23));
-            _minute = Math.floor((Math.random() * 11)) * 5;
-            _clock = new Clock('clock-canvas');
-            _clock.onChangeClock(colorClock);
+        onInit: function(clockColor) {
+            hour = Math.floor((Math.random() * 23));
+            minute = Math.floor((Math.random() * 11)) * 5;
+            clock = new Clock();
+            clock.onChangeClock(clockColor);
         },
         getHour: function() {
-            return _hour;
+            return hour;
         },
         getMinute: function() {
-            return _minute;
+            return minute;
         },
         getPartTime: function() {
-            if (_hour > 18) {
-                return "Soir";
-            } else if (_hour >= 12) {
-                return "Après-midi";
-            } else {
+            if (hour <= 12) {
                 return "Matin";
+            } else {
+                return "Après-midi";
             }
         },
         onStartGame: function() {
-            _clock.setTime(_hour, _minute);
+            clock.setTime(hour, minute);
         },
         onReloadGame: function() {
-            _hour = Math.floor((Math.random() * 23));
-            _minute = Math.floor((Math.random() * 11)) * 5;
-            _clock.setTime(_hour, _minute);
+            hour = Math.floor((Math.random() * 23));
+            minute = Math.floor((Math.random() * 11)) * 5;
+            clock.setTime(hour, minute);
         },
-        onMatchedTimeClock: function(hour, minute) {
-            if (_hour == hour && _minute == minute) {
+        checkHour: function(hourUser, minuteUser) {
+            if (hour == hourUser && minute == minuteUser) {
                 return true;
             }
             return false;
         }
-    }
+    };
 });
