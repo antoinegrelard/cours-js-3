@@ -1,3 +1,3 @@
-var options = angular.module("options", ["ngRoute"]);
+var options = angular.module("options");
 options.controller("optionsController", [ "$scope", function($scope) {
 }]);

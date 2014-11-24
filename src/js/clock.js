@@ -69,13 +69,13 @@ var Clock = function() {
             layerMinute.draw();
         };
 
-        imageClock.src = '../img/clock1.png';
-        imageHour.src = '../img/secondHand.png';
-        imageMinute.src = '../img/firstHand.png';
+        imageClock.src = './src/img/clock1.png';
+        imageHour.src = './src/img/secondHand.png';
+        imageMinute.src = './src/img/firstHand.png';
         stage.add(layerClock, layerHour, layerMinute);
     };
     this.onChangeClock = function(clock) {
-        imageClock.src = '../img/' + clock + '.png';
+        imageClock.src = './src/img/' + clock + '.png';
     };
     this.setTime = function(hour, minute) {
         var tmpHour = hour > 12 ? hour - 12 : hour + minute / 60;

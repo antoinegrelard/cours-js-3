@@ -1,4 +1,4 @@
-var clockService = angular.module("clockServiceModule", []);
+var clockService = angular.module("clockService", []);
 clockService.service('clockService', function() {
     var _hour;
     var _minute;

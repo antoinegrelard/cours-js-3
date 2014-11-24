@@ -1,3 +1,3 @@
-var home = angular.module("home", ["ngRoute"]);
+var home = angular.module("home");
 home.controller("homeController", [ "$scope", function($scope) {
 }]);
