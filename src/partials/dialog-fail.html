@@ -1,7 +1,7 @@
 <img src='./src/img/fail.png'>
 <p> l'heure exacte était : {{ clock.hour }} h {{ clock.minute }}</p>
 <div class='buttons'>
-	<a href ng-click='closeThisDialog(0)'><img src='./src/img/button_menu.png'></a>
-	<a href ng-click='closeThisDialog(1)'><img src='./src/img/button_replay.png'></a>
+	<a href ng-click='closeThisDialog("backToMenu")'><img src='./src/img/button_menu.png'></a>
+	<a href ng-click='closeThisDialog("playAgain")'><img src='./src/img/button_replay.png'></a>
 </div>
-<span class='close-dialog-button' ng-click='closeThisDialog(1)'><img src='./src/img/cross.png'></span>
+<span class='close-dialog-button' ng-click='closeThisDialog("playAgain")'><img src='./src/img/cross.png'></span>

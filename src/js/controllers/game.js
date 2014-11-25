@@ -12,30 +12,34 @@ game.controller("gameController", function($rootScope, ngDialog, $scope, $timeou
 	    if (clockService.checkHour($scope.hour, $scope.minute)) {
 	        ngDialog.open({
 	            preCloseCallback: function(value) {
-	                if (value === 0) {
+	                if (value === 'backToMenu') {
 	                    $scope.location.path("/");
 	                }
-	                if (value == '$document' || value == '$closeButton' || value == 1) {
+	                if (value == '$document' || value == 'playAgain') {
 	                    $scope.reloadGame();
 	                }
 	            },
 	            scope: $scope,
-	            template: './src/pages/dialog-success.html'
+	            template: './src/pages/dialog-success.html',
+	            showClose: false,
+	            closeByEscape: false
 	        });
 	    } else {
 	        $scope.clock.hour = clockService.getHour();
 	        $scope.clock.minute = clockService.getMinute();
 	        ngDialog.open({
 	            preCloseCallback: function(value) {
-	                if (value === 0) {
+	                if (value === 'backToMenu') {
 	                    $scope.location.path("/");
 	                }
-	                if (value == '$document' || value == '$closeButton' || value == 1) {
+	                if (value == '$document' || value == 'playAgain') {
 	                    $scope.reloadGame();
 	                }
 	            },
 	            scope: $scope,
-	            template: './src/pages/dialog-fail.html'
+	            template: './src/pages/dialog-fail.html',
+	            showClose: false,
+	            closeByEscape: false
 	        });
 	    }
 	};

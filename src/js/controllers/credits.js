@@ -1,3 +1,3 @@
 var credits = angular.module("credits", []);
-credits.controller("creditsController", [ "$scope", function($scope) {
-}]);
+credits.controller("creditsController", function($scope) {
+});

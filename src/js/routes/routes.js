@@ -1,6 +1,6 @@
 var routes = angular.module("routes", ["ngRoute"]);
 
-routes.config([ "$routeProvider" ,function($routeProvider) {
+routes.config(function($routeProvider) {
 
     $routeProvider
 
@@ -23,4 +23,4 @@ routes.config([ "$routeProvider" ,function($routeProvider) {
             templateUrl : 'src/pages/credits.html',
             controller  : 'creditsController'
         });
-}]);
+});

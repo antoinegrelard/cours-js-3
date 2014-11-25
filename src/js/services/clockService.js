@@ -8,7 +8,7 @@ clockService.service('clockService', function() {
             hour = Math.floor((Math.random() * 23));
             minute = Math.floor((Math.random() * 11)) * 5;
             clock = new Clock();
-            clock.onChangeClock(clockColor);
+            clock.changeClockColor(clockColor);
         },
         getHour: function() {
             return hour;

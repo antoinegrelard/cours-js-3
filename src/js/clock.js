@@ -74,21 +74,21 @@ var Clock = function() {
         minuteImage.src = './src/img/firstHand.png';
         stage.add(clockLayer, hourLayer, minuteLayer);
     };
-    this.onChangeClock = function(clock) {
+    this.changeClockColor = function(clock) {
         clockImage.src = './src/img/' + clock + '.png';
     };
     this.setTime = function(hour, minute) {
         var degHour = hour * 360 / 12;
         var degMinute = minute * 360 / 60;
-        this.onRotateHour(degHour);
-        this.onRotateMinute(degMinute);
+        this.rotateHourLayer(degHour);
+        this.rotateMinuteLayer(degMinute);
     };
-    this.onRotateHour = function(deg) {
+    this.rotateHourLayer = function(deg) {
         hourLayer.rotation(deg);
         hourLayer.draw();
     };
 
-    this.onRotateMinute = function(deg) {
+    this.rotateMinuteLayer = function(deg) {
         minuteLayer.rotation(deg);
         minuteLayer.draw();
     };
