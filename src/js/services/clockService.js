@@ -4,7 +4,7 @@ clockService.service('clockService', function() {
     var minute;
     var clock;
     return {
-        onInit: function(clockColor) {
+        initGame: function(clockColor) {
             hour = Math.floor((Math.random() * 23));
             minute = Math.floor((Math.random() * 11)) * 5;
             clock = new Clock();
@@ -23,10 +23,10 @@ clockService.service('clockService', function() {
                 return "Après-midi";
             }
         },
-        onStartGame: function() {
+        startGame: function() {
             clock.setTime(hour, minute);
         },
-        onReloadGame: function() {
+        reloadGame: function() {
             hour = Math.floor((Math.random() * 23));
             minute = Math.floor((Math.random() * 11)) * 5;
             clock.setTime(hour, minute);

@@ -42,6 +42,7 @@ ol {
 
 		.time-set {
 			display: inline-block;
+			vertical-align: top;
 
 			span {
 				display: block;
@@ -64,6 +65,11 @@ ol {
 			box-sizing: border-box;
 			border: 5px solid #333;
 			border-radius: 6px;
+			font-family: "Georgia", "Arial", "Sans-Serif";
+			-webkit-font-smoothing: antialiased;
+			font-size: 50px;
+			line-height: 80px;
+			color: #333;
 		}
 
 		&.time-separator {

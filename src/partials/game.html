@@ -6,8 +6,8 @@
 		<ul class="row">
 			<li class="column">
 				<div class="time-set">
-					<span class="time-increase"><img src="./src/img/button_up.png"></span>
-					<span class="time-decrease"><img src="./src/img/button_down.png"></span>
+					<span class="time-increase" ng-click="increaseNumber('hour')"><img src="./src/img/button_up.png"></span>
+					<span class="time-decrease" ng-click="decreaseNumber('hour')"><img src="./src/img/button_down.png"></span>
 				</div>
 				<span class="time-value time-hour" ng-bind="hour"></span>
 			</li>
@@ -15,8 +15,8 @@
 			<li class="column">
 				<span class="time-value time-minute" ng-bind="minute"></span>
 				<div class="time-set">
-					<span class="time-increase"><img src="./src/img/button_up.png"></span>
-					<span class="time-decrease"><img src="./src/img/button_down.png"></span>
+					<span class="time-increase" ng-click="increaseNumber('minute')"><img src="./src/img/button_up.png"></span>
+					<span class="time-decrease" ng-click="decreaseNumber('minute')"><img src="./src/img/button_down.png"></span>
 				</div>
 			</li>
 		</ul>
